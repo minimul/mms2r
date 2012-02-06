@@ -8,6 +8,8 @@ class TestBadSpecCharsOutlook < Test::Unit::TestCase
     mms = MMS2R::Media.new(mail)
     body = mms.body
     p body
+    #assert
+    #assert_match(/AA¢A,\u0080A,\u0099showpicture\.jpeg$/, mms.media['image/jpeg'].first)
 
     mms.purge
   end
